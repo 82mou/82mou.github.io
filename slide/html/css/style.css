@@ -1,0 +1,231 @@
+.content {
+    width: 960px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+body {
+    color: #434343;
+}
+
+header { 
+    height: 80px;
+    margin-top: 20px;
+}
+
+.logo {
+    height: 60px;
+    width: 200px;
+    float: left;
+}
+.logo img {
+    width: 100%;
+}
+
+.info {
+    height: 60px;
+    width: 500px;
+    float: right;
+    line-height: 60px;
+    text-align: center;
+    background: #f3f3f3;
+}
+
+.top {
+    background-image: url(../img/jack.jpg);
+    width: 100%;
+    height: 315px;
+    background-position: center center;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    font-size: 0;
+    margin-bottom: 20px;
+}
+
+nav li {
+    width: 190px;
+    display: inline-block;
+    border-left: solid 1px #FFF;
+    border-right: solid 1px #FFF;
+    height: 60px;
+    text-align: center;
+}
+nav li:hover {
+    /*其の六*/
+}
+
+nav li a {
+    color: #FFF;
+    line-height: 60px;
+    display: block;
+    font-size: 12px;
+}
+nav li a:hover {
+    /*其の六*/
+}
+
+.main {
+    width: 704px;
+    float: left;
+    margin-top: 20px;
+    margin-right: -24px;
+    margin-bottom: 20px;
+    letter-spacing: 0;
+    font-size: 0;
+}
+
+.main article {
+    display: inline-block;
+    width: 328px;
+    height: 220px;
+    margin-right: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main article img {
+    width: 100%;
+}
+
+.main article h1{
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 15px 15px 10px;
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.702;
+    color: #FFF;
+    font-size: 14px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.main .main-image {
+    /* 其の五 */
+}
+
+.side {
+    width: 256px;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.side article {
+    margin-bottom: 20px;
+}
+
+.side article img {
+    width: 100%;
+}
+
+.news {
+    border: 1px solid #e1e1e1;
+}
+
+.news .title {
+    background: #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+.side .list li {
+    display: block;
+    border-bottom: 1px dotted #e1e1e1;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+.footer {
+    padding: 50px 0;
+    background: #f3f3f3;
+    overflow: hidden;
+    clear: both;
+}
+
+.footer-inner {
+    width: 1005px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-contents {
+    float: left;
+    padding-right: 40px;
+    margin-top: 20px;
+    border-right: 1px solid #e1e1e1;
+    margin-right: 40px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.footer-contents:last-child {
+    border-right: none;
+}
+
+.footer-contents li {
+    margin: 10px 0;
+}
+
+
+/* sub */
+.blog {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddddd;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 680px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.blog h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: bold;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: dotted 1px #989898;
+}
+
+/* 其の七 */
+
+
+
+
+
+/* 其の七 */
+
+
+
+
+
+/* clearfix */
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: block;
+}
+.clearfix:after {
+    clear: both;
+}
