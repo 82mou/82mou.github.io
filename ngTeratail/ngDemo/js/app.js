@@ -1,14 +1,24 @@
 (function(){
 	angular.module('myApp', [])
-		.controller('appCtrl', [function(){
-			this.list = [];
-			this.clickButton = function() {
-				this.todo.date = Date.now();
-				this.list.push(this.todo)
-				this.todo = {};
-			}
-			this.clickList = function(item){
-				item.done = !item.done;
-			}
-		}])
+		.component('todo', {
+			controllerAs: 'app',
+			controller: function(){
+				this.list = [];
+				this.clickButton = function(){
+					this.todo.date = Date.now();
+					this.list.push(this.todo)
+					this.todo = {};
+				}
+				this.clickList = function(item){
+					item.done = !item.done;
+				}
+				this.clickDeleteButton = function(item){
+					var idx = this.list.indexOf(item);
+					if(idx >=0){
+						this.list.splice(idx, 1);
+					}
+				}
+			},
+			templateUrl: 'template/template.html'
+		})
 })();

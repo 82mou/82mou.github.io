@@ -1,0 +1,16 @@
+<form name="todoForm" novalidate>
+	<div>
+		<span>投稿：</span><input type="text" name="todo" ng-model="app.todo.name" required>
+		<button ng-click="app.clickButton()">click!!</button>
+	</div>
+	<div>
+		<span>フィルター：</span><input type="text" ng-model="app.search">
+	</div>
+</form>
+<ul>
+	<li ng-repeat="item in app.list | filter : app.search | orderBy: '-date'">
+		<span ng-click="app.clickList(item)" ng-class="{done: item.done}">
+			{{item.name}} - {{item.date | date: 'yyyy/MM/dd HH:mm:ss'}}
+		</span>
+	</li>
+</ul>
