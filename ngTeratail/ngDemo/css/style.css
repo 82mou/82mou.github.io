@@ -1,0 +1,6 @@
+input.ng-invalid{
+	border: solid 1px red;
+}
+.done {
+	text-decoration: line-through;
+}
