@@ -48,7 +48,7 @@
 					<h2>PASS：iinetwork</h2>
 				</section>
 				<section>
-					<h1>JIRAでメンション付きコメントするとSlackに通知がいく機能をNode.jsで実装してみた</h1>
+					<h2>JIRAでメンション付きコメントするとSlackに通知がいく機能をNode.jsで実装してみた</h2>
 					<!--<h3>The HTML Presentation Framework</h3>-->
 					<p>
 						<small>Created by <a href="https://www.facebook.com/?ref=logo">Kazuya Hatsushi</a></small>
@@ -59,216 +59,26 @@
 					<div><img src="./images/slide_profile.jpg"></div>
 				</section>
 				<section>
-					<h2>WEBとは</h2>
+					<h2>JIRAとは</h2>
 				</section>
-
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<p>インターネット上で標準的に用いられている、文書の公開・閲覧システム</p>
-						<p class="fragment">文字や画像、動画などを一体化したHTMLをネット上で公開し、閲覧することができる</p>
-					</section>
-					<section>
-						<h2>補足</h2>
-					</section>
-					<section>
-						<h2>“Web”とは蜘蛛の巣の意味</h2>
-						<p class="fragment">大規模な文書間の繋がりを図示すると複雑な蜘蛛の巣のように見えることからこのように呼ばれる</p>
-						<p class="fragment">また、Webは、Webページとも呼ばれ、HTMLやCSSなどの組み合わせで作られたページのことを指す<br>
-							HTMLでは見出しや段落などの文字、表、別のページ飛ぶためのリンクなど記載し、CSSでは要素の大きさや配置、色などの見栄えを整える</p>
-						<p class="fragment">複数の相互に関連する一連のページの集合体をサイト（Webサイト）という</p>
-					</section>
+					<div><img src="./images/jira1.png"></div>
+					<p>こんな感じのタスク管理ツールです</p>
 				</section>
-
 				<section>
-					<section>
-						<h2>HTMLとは</h2>
-					</section>
-					<section>
-						<h2>ざっくり言うと、文書（テキストファイル）のこと</h2>
-					</section>
-					<section>
-						<p>Hyper Text Markup Language（ハイパーテキスト・マークアップ・ランゲージ）の略。</p>
-						<p class="fragment">Webページの骨組みとなるもの。</p>
-						<p style="text-align: right;"><small class="fragment">※マークアップとは印をつけるの意。</small></p>
-					</section>
-					<section>
-						<h2>wikipediaから抜粋した文を例にします</h2>
-					</section>
-					<section>
-						<h4>文章を打ったテキストファイル（拡張子が.txtのファイル）を作成します</h4>
-						<div><img src="./images/www1.png" alt=""></div>
-					</section>
-					<section>
-						<h4>ブラウザにドラッグアンドドロップしてみましょう</h4>
-						<div><img src="./images/drag_drop.jpg" alt=""></div>
-						<p><small>こういうやつ</small></p>
-					</section>
-					<section>
-						<h4>こんな感じで表示されます</h4>
-						<div><img src="./images/www2.png" alt=""></div>
-					</section>
-					<section>
-						<h2>ではファイルの拡張子を.txt→.htmlに変更して再度ブラウザで開いてみます</h2>
-					</section>
-					<section>
-						<h4>改行などはありませんが、ちゃんと表示されます</h4>
-						<div><img src="./images/www3.png" alt=""></div>
-						<p>以上のことから、htmlもテキストファイルの一種だということがわかります</p>
-					</section>
-					<section>
-						<h2>では拡張子がhtmlでも正しく表示させるようにします</h2>
-					</section>
-					<section>
-						<h4>そこで必要なのが、タグというものでテキストを囲う、「マークアップ」という作業です</h4>
-						<div><img src="./images/www4.png" alt=""></div>
-					</section>
-					<section>
-						<h2>書き直したものをブラウザで見てみます</h2>
-					</section>
-					<section>
-						<h4>それっぽく整形されましたね</h4>
-						<div><img src="./images/www5.png" alt="" style="width: 700px;"></div>
-					</section>
-					<section>
-						<h2>htmlは、ブラウザで正しく表示するために、適切なタグでマークアップをする必要があります。</h2>
-					</section>
-					<section>
-						<h1>h1 → 一番大きい見出し</h1>
-						<h2 class="fragment">h2 → 二番大きい見出し</h2>
-						<h3 class="fragment">h3 → 三番大きい見出し</h3>
-						<p class="fragment">p → 文章の段落</p>
-						<p class="fragment">ul、li → リスト</p>
-						<ul class="fragment">
-							<li>りんご</li>
-							<li>ばなな</li>
-							<li>みかん</li>
-						</ul>
-					</section>
-					<section>
-						<h4>また、文字だけでなく、画像や動画などを表示する機能も備えています。</h4>
-					</section>
+					<h2>今回やりたいこと</h2>
 				</section>
-
 				<section>
-					<section>
-						<h2>CSSとは</h2>
-					</section>
-					<section>
-						<h2>HTML（骨組み）を装飾（肉付け）するもの</h2>
-					</section>
-					<section>
-						<p>正式名称はCascading Style Sheets（カスケーディング・スタイル・シート）と呼ばれる。ウェブページのスタイルを指定するための言語。</p>
-						<p class="fragment">CSSは、HTMLと組み合わせて使用する言語。 HTMLがウェブページ内の各要素の意味や情報構造を定義するのに対して、CSSではそれらをどのように装飾するかを指定する。</p>
-					</section>
-					<section>
-						<p>骨に</p>
-						<div><img src="./images/bone.jpg" width="500" alt=""></div>
-					</section>
-					<section>
-						<p>肉付けする</p>
-						<div><img src="./images/yutaro.jpg" width="500" alt=""></div>
-					</section>
+					<div><img src="./images/jira_hubot_heroku_slack.jpg"></div>
 				</section>
-
 				<section>
-					<p>その他</p>
+					<div><img src="./images/jira2.jpg"></div>
+					<p>メンションをつけてコメントします</p>
 				</section>
-
 				<section>
-					<section>
-						<h2>JavaScript</h2>
-					</section>
-					<section>
-						<p>Web上でインタラクティブな表現をする為に開発された簡易プログラミング言語。</p>
-						<p class="fragment">HTML内にプログラムを埋め込むことで、Webページに様々な動きや機能を付加し、HTMLやCSSでは表現できないものを作ることができる</p>
-					</section>
-					<section>
-						<h4>こういうやつ</h4>
-						<p><a href="http://bookcase.chromeexperiments.com/">http://bookcase.chromeexperiments.com/</a></p>
-					</section>
+					<div><img src="./images/slack1.png"></div>
+					<p>こんな感じでうけとります</p>
 				</section>
-
-				<section>
-					<h2>Web製作の仕事とは</h2>
-				</section>
-
-				<section>
-					<section>
-						<h2>営業</h2>
-					</section>
-					<section>
-						<p>製作の仕事を取ってくる職業</p>
-						<p class="fragment">クライアントとの折衝、収支の管理など</p>
-						<p class="fragment">製作現場に用件を伝える役割を担うこともあり、どれだけの情報を、クライアントの意向と相違なく吸い取り、クリエイティブチームに対して同じレベルで共有することができるかが重要</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Webディレクター</h2>
-					</section>
-					<section>
-						<p>製作現場を管理する職業</p>
-						<p class="fragment">タスク管理、時間管理、クライアントとの折衝など多岐に渡ります。<br>
-							場所によっては営業と兼務のところも</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Webデザイナー</h2>
-					</section>
-					<section>
-						<p>デザインを作る職業</p>
-						<p class="fragment">主にPhotoshoやIllastratorを使用し、クライアントの意向に沿ったデザインを提案・作成する<br>
-							場所によってはコーディングまでおこなうところも</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>フロントエンドエンジニア（コーダー）</h2>
-					</section>
-					<section>
-						<p>サイトの「見える部分」部分を組み上げる職業</p>
-						<p class="fragment">デザイナーが作ったものを元に、HTML、CSS、javascriptを書いてサイトを組み上げる。この一連の流れを「コーディング」と呼ぶ</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>バックエンドエンジニア（サーバーサイドエンジニア）</h2>
-					</section>
-					<section>
-						<p>サイトの「見えない」部分を組み上げる職業</p>
-						<p class="fragment">ユーザーの操作に応じて、動的に処理をおこなうためのプログラミングをする</p>
-						<p class="fragment">例：検索窓で何かテキストを打ち込んで「検索」を押した際、そのテキストに応じた検索結果を表示させる</p>
-					</section>
-				</section>
-
-				<section>
-					<p>Webサイトを製作する上で、他にも様々な職業があります。</p>
-				</section>
-
-				<section>
-					<p>今回はフロントエンドエンジニアに関わる仕事を体験していただきます</p>
-				</section>
-
-				<section>
-					<p>おまけ</p>
-				</section>
-
-				<section>
-					<p>このスライドもHTML、CSS、JavaScriptで作っています</p>
-				</section>
-
-				<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-					<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-						<h2>こんなこともできます</h2>
-					</div>
-				</section>
-
 				<section style="text-align: left;">
 					<h1>THE END</h1>
 					<p>ご静聴ありがとうございました</p>
