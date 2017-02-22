@@ -1,10 +1,10 @@
-var $map = $('#js-gmap');
-var latitude = $map.data('latitude'), // 緯度
-	longitude = $map.data('longitude'), // 経度
-	title = $map.data('title');
-var targetLatlng = new google.maps.LatLng(latitude, longitude);
-
 function setMap() {
+	var $map = $('#js-gmap');
+	var latitude = $map.data('latitude'), // 緯度
+		longitude = $map.data('longitude'), // 経度
+		title = $map.data('title'); // タイトル
+	var targetLatlng = new google.maps.LatLng(latitude, longitude);
+
 	var myOptions = {
 		zoom: 15, // 拡大比率
 		center: targetLatlng, // 表示枠内の中心点
