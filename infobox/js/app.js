@@ -42,8 +42,8 @@ function setMap() {
 	// マーカーがクリックされた時に情報ウィンドウ表示
 	targetMarker.addListener('click', function() {
 		infobox.open(map, targetMarker);
-}	);
-};
+	});
+}
 
 $(window).on('load', function() {
 	setMap();
